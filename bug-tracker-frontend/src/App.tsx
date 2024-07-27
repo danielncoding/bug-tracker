@@ -1,6 +1,7 @@
 import {FC, useState} from 'react'
 
 import Menu from './components/Menu.tsx'
+import Dashboard from './components/Dashboard.tsx';
 
 const App = () => {
 
@@ -13,10 +14,8 @@ const App = () => {
 
     return(
         <div id="div_main_container">
-            <Menu switchMenu={switchMenu}></Menu>
-            <div>
-                Test
-            </div>
+            <Menu></Menu>
+            <Dashboard></Dashboard>
         </div>
     );
 }

@@ -10,9 +10,40 @@ html, body {
   flex-direction: column;
 }
 
-#div_menu_layout{
+#div_menu_layout, #div_dashboard_upper{
   display: flex;
   flex-direction: row;
+}
+
+#div_dashboard_upper{
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.th_100px{
+  width: 100px;
+}
+
+.div_dashboard_upper_box{
+  font-size: large;
+  width: 500px;
+  border: 1px solid #000;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 70px;
+  font-family: Tahoma;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.table_generic{
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  display:flex;
+  flex-direction: column;
 }
 
 .menu_button{

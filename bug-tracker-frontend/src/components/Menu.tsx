@@ -2,7 +2,7 @@ interface Props {
     switchMenu: string
   }
 
-const Menu = ({switchMenu}: Props) => {
+const Menu = () => {
     return(
         <div id="div_menu_container">
 
@@ -13,9 +13,9 @@ const Menu = ({switchMenu}: Props) => {
                     <span id="span_menu_title">BUG TRACKER</span>
                 </div>
 
-                <button className="menu_button" onClick={switchMenu("menu_dashboard")}>Dashboard</button>
-                <button className="menu_button">Placeholder1</button>
-                <button className="menu_button">Placeholder2</button>
+                <button className="menu_button">Dashboard</button>
+                <button className="menu_button">Bug List</button>
+                <button className="menu_button">Add New Bug</button>
                 <button className="menu_button">Placeholder3</button>
                 <button className="menu_button">Placeholder4</button>
 
