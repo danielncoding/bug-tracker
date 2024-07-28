@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 #div_main_container{
@@ -10,25 +11,91 @@ html, body {
   flex-direction: column;
 }
 
-#div_menu_layout, #div_dashboard_upper{
+#div_menu_layout, .div_buglist{
   display: flex;
   flex-direction: row;
 }
 
-#div_dashboard_upper{
+.div_buglist{
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.th_100px{
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f7e3cd; /* Background color for the sticky header */
+  z-index: 1; /* Ensures the header is above other content */
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+td{
+  padding-top: 9px;
+}
+.table_generic{
+  width: 96%;
+  align-items: center;
+  border-collapse: collapse;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.table_th_header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.table_th_searchbar{
   width: 100px;
+  margin: 0;
+  padding: 0;
+}
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+th, td {
+  padding: 18px;
+  text-align: center;
+  user-select: none;
+  max-width: 150px;
+  max-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.td_id, .td_assigned_to, .td_priority, .td_due_date, .td_status{
+  max-width: 120px;
+  min-width: 120px;
+  width: 120px;
+}
+.td_id{
+  cursor: pointer;
 }
 
-.div_dashboard_upper_box{
-  font-size: large;
-  width: 500px;
-  border: 1px solid #000;
+.td_description, .td_project{
+  max-width: 250px;
+  min-width: 250px;
+  width: 250px;
+}
+.td_id:active{
+  background-color: #dbdbdb;
+}
+.div_buglist_title_bar{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 2%;
+}
+.div_buglist_box{
+  width: 90%;
   text-align: center;
   margin-left: 40px;
   margin-right: 40px;
@@ -37,14 +104,24 @@ html, body {
   font-size: 14px;
   font-weight: bold;
 }
-
-.table_generic{
+.div_buglist_box_inside{
   width: 100%;
-  align-items: center;
-  justify-content: space-evenly;
-  display:flex;
-  flex-direction: column;
+  max-height: 350px;
+  min-height: 350px;
+  overflow: auto;
 }
+.div_buglist_box_inside::-webkit-scrollbar {
+  width: 6px;
+  height: 12px;
+}
+.div_buglist_box_inside::-webkit-scrollbar-thumb {
+  background-color: #d6b99b;
+  border-radius: 10px;
+}
+.div_buglist_box_inside::-webkit-scrollbar-track {
+  width: 10px;
+}
+
 
 .menu_button{
   border: 0;
@@ -56,10 +133,10 @@ html, body {
   font-size: 15px;
   border-radius: 10px;
 }
-.menu_button:hover{
+.menu_button:hover, th:hover{
   background-color: #d6b99b;
 }
-.menu_button:active{
+.menu_button:active, th:active{
   background-color: #cfaa82;
 }
 
