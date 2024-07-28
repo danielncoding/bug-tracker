@@ -1,7 +1,9 @@
 import {FC, useState} from 'react'
 
 import Menu from './components/Menu.tsx'
+import BugList from './components/BugList.tsx';
 import Dashboard from './components/Dashboard.tsx';
+
 
 const App = () => {
 
