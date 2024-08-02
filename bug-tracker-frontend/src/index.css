@@ -26,8 +26,8 @@ html, body {
 thead th {
   position: sticky;
   top: 0;
-  background-color: #f7e3cd; /* Background color for the sticky header */
-  z-index: 1; /* Ensures the header is above other content */
+  background-color: #f7e3cd; 
+  z-index: 1; 
   padding-top: 9px;
   padding-bottom: 9px;
 }
@@ -181,4 +181,194 @@ th, td {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+#top_section, #bottom_section{
+  width: 100%;
+  display: flex;
+}
+#top_section {
+  height: 30vh;
+}
+#bottom_section {
+  height: 63vh;
+}
+
+#top_left_section {
+  flex-direction: row;
+  background-color: #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 10px solid #ddd;
+  border-top: 10px solid #ddd;
+}
+#top_right_section, #bottom_left_section, #bottom_right_section {
+  flex-direction: column;
+  padding: 10px;
+  border: 10px solid #ddd;
+}
+#top_left_section, #top_right_section, #bottom_left_section, #bottom_right_section {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#top_left_section, #bottom_left_section {
+  width: 70%;
+}
+#top_right_section, #bottom_right_section {
+  width: 30%;
+}
+
+.stat_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 5px solid #ddd;
+  margin: 5px;
+  height: 100%;
+  background-color: #fff;
+}
+.stat_box img {
+  width: 70px;
+  height: 70px;
+}
+.stat_counter, .stat_text {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: Tahoma;
+  color: #757575;
+
+}
+
+.dashboard_title {
+  font-size: 28px;
+  font-style: Tahoma;
+  font-weight: bold;
+  color: #757575;
+}
+#table_tickets_by_priority {
+  width: 80%;
+  border-collapse: collapse;
+  position: absolute;
+  top: 140px;
+}
+#table_tickets_by_priority td {
+  padding: 8px;
+  text-align: left;
+  width: 60%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #757575;
+}
+#table_tickets_by_priority tr {
+  border: 1px solid #ddd;
+}
+
+
+
+.piecharts_container_top, .piecharts_container_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.piecharts_container_top {
+  position: absolute;
+  top: 120px;
+}
+.piecharts_container_bottom {
+  position: absolute;
+  top: 360px;
+}
+.pie-chart-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(#ddd 0% 73%, #d6b99b 73% 100%);
+}
+.pie-chart-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.pie-chart-inner p {
+margin: 0;
+}
+
+
+
+#owner_list {
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+  position: absolute;
+  top: 120px;
+}
+#owner_list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+#owner_list li span:first-child {
+  width: 20%;
+  text-align: left;
+}
+#owner_list li progress {
+  flex: 1;
+  height: 20px;
+  margin: 0 10px;
+  appearance: none;
+}
+#owner_list li progress::-webkit-progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+#owner_list li progress::-webkit-progress-value {
+  background-color: #d6b99b;
+  border-radius: 10px;
+}
+#owner_list li span:last-child {
+  width: 10%;
+  text-align: right;
+}
+.p_tickets_by_owner_name {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  width: 70px;
+  max-width: 70px;
+  font-size: 18px;
+}
+
+
+.div_section {
+  position: relative;
+}
+.div_dashboard_title {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  width: 100%;
 }
